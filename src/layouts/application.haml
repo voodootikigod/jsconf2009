@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %title JSCONF 2009
+    = stylesheets
+    = javascripts("jquery-1.2.6.min", "jquery.jparallax", "application")
+  %body
+    #frame
+      #header
+        %h1 JSCONF 2009
+      #tagline
+        = img "spinner.gif"
+        don't call it dhtml
+      #navigation
+        %ul
+          %li
+            %a{"href"=>"/"} home
+          %li
+            %a{"href"=>"/"} speakers
+          %li
+            %a{"href"=>"/"} schedule
+          %li
+            %a{"href"=>"/"} register
+      #wrapper
+        #content
+          = yield
+        #sidebar
+          #datebox
+            April.random()
+            %div
+              Place.random()
