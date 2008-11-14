@@ -9,23 +9,28 @@
       #header
         %h1 JSCONF 2009
       #tagline
+        %span#mots
+          don't call it dhtml
         = img "spinner.gif"
-        don't call it dhtml
       #navigation
         %ul
           %li
             %a{"href"=>"/"} home
           %li
-            %a{"href"=>"/"} speakers
-          %li
-            %a{"href"=>"/"} schedule
-          %li
-            %a{"href"=>"/"} register
+            %a{"href"=>"/speakers.html"} call for speakers
+          / %li
+          /             %a{"href"=>"/schedule.html"} schedule
+          /           %li
+          /             %a{"href"=>"/register.html"} register
       #wrapper
         #content
           = yield
         #sidebar
           #datebox
-            April.random()
+            Late April, 2009
             %div
-              Place.random()
+              Washington, DC USA
+          #subscriptionbox
+            %h4 Register for Updates
+            =subscription
+    =gajs
