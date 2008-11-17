@@ -2,9 +2,15 @@
 <html>
   <head>
     <title>JSCONF 2009</title>
-    <link href="stylesheets/application.css" media="all" rel="stylesheet" type="text/css"/>
-    <script language="javascript" src="javascripts/jquery.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/typeface.js" type="text/javascript"></script><script language="javascript" src="javascripts/helvetiker_regular.typeface.js" type="text/javascript"></script><script language="javascript" src="javascripts/helvetiker_bold.typeface.js" type="text/javascript"></script><script language="javascript" src="javascripts/application.js" type="text/javascript"></script>
+    <script language="javascript" src="javascripts/jquery.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.cookie.js" type="text/javascript"></script><script language="javascript" src="javascripts/typeface.js" type="text/javascript"></script><script language="javascript" src="javascripts/helvetiker_regular.typeface.js" type="text/javascript"></script><script language="javascript" src="javascripts/helvetiker_bold.typeface.js" type="text/javascript"></script><script language="javascript" src="javascripts/application.js" type="text/javascript"></script>
     <!--[if IE]><script type="text/javascript" src="javascripts/excanvas.js"></script><![endif]-->
+          <script type="text/javascript">
+            if ($.cookie("stylesheet") == "fringe") {
+              document.write('<link href="stylesheets/fringe.css" media="all" rel="stylesheet" type="text/css"/>');
+            } else {
+              document.write('<link href="stylesheets/professional.css" media="all" rel="stylesheet" type="text/css"/>');
+            }
+          </script>
   </head>
   <body>
     <div id='frame'>
@@ -52,6 +58,14 @@
             <p>Come to this conference if you love JavaScript, come if you hate it, come if you don't even know how to program. Whatever drives you to come, you can be sure of one thing, there will be a lot of exciting and invigorating discussions to be had. After all, we are talking about JavaScript here and its used by every web framework.</p>
             <p>We are trying to conduct this conference in such a manner that it addresses the core issues of the community as well as announcing cutting edge technologies in a language that often gets overlooked. The content and conference style will be different from most other conferences, not barcamp-style and not multi-track style, but somewhere between the two.</p>
             <p>We are trying to make something different and we are trying to do it with JavaScript.</p>
+            <!-- %h4 News from the World of JavaScript -->
+            <!-- .rssfeed -->
+            <!-- <script language="JavaScript" src="http://itde.vccs.edu/rss2js/feed2js.php?src=http%3A%2F%2Ffeeds.delicious.com%2Fv2%2Frss%2Fjsconf2009%3Fcount%3D10&chan=n&num=10&desc=1&date=y&targ=n" type="text/javascript"></script> -->
+            <!-- <noscript> -->
+            <!-- <a href="http://itde.vccs.edu/rss2js/feed2js.php?src=http%3A%2F%2Ffeeds.delicious.com%2Fv2%2Frss%2Fjsconf2009%3Fcount%3D10&chan=n&num=10&desc=1&date=y&targ=n&html=y">View RSS feed</a> -->
+            <!-- </noscript> -->
+            <!-- 
+            -->
           </div>
         </div>
         <div id='sidebar'>
@@ -73,6 +87,18 @@
                 </div>
                 </form>
             <p>This will sign you up to our email list so you can receive updates as they are made available. We will never abuse this privilege by providing your information to anyone else.</p>
+          </div>
+          <div class='clearfix' id='stylepicker'>
+            <a href='http://www.jsconf2009.com' id='cleanme'>
+              <img src='/images/cleanme.png' />
+              <br />
+              Clean Style
+            </a>
+            <a href='http://www.jsfringe.com' id='fringeme'>
+              <img src='/images/fringeme.png' />
+              <br />
+              Fringe Style
+            </a>
           </div>
         </div>
       </div>
