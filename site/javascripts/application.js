@@ -3,20 +3,13 @@ var sayings = ["death by javascript inc", "javascript is a horrible nightmare", 
 
 jQuery(document).ready(function(){
 	idx = (Math.ceil(Math.random()*100))%sayings.length;
-	$("#mots").text(sayings[idx]);
-	$("#fringeme").click(function(e)	{
-		e.preventDefault();
-		e.stopPropagation();
-		$.cookie("stylesheet", "fringe");
-		window.location.reload();
-	});
-	$("#cleanme").click(function(e)	{
-		e.preventDefault();
-		e.stopPropagation();
-		$.cookie("stylesheet", "clean");
-		window.location.reload();
-	})
-	$("h1").addClass("typeface-js");
+  current_saying = sayings[idx];
+	$("#mots").text(current_saying);
+	if (current_saying.length > 60) {
+	  $("#mots").css({"font-size":"10px"});
+	}
+	$("#datefocus").hide();
+	$("#datebox").mouseover(function()  { $("#datefocus").show(); }).mouseout(function()  { $("#datefocus").hide(); })
 });
 
 
