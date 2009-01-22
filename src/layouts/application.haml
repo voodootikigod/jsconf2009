@@ -42,16 +42,12 @@
           %li#about
             %a{"href"=>"/about.html"} 
               %span About
- 
+      #earlybird
+        %a{"href"=>"http://jsconf2009.eventbrite.com"}
+          %span Early Bird Discount $450 if you register by March 11, 2009
       #wrapper
         #content
           = yield
-        #sidebar
-          #subscriptionbox
-            %h4
-              %span Register for Updates
-            =subscription
-            %p This will sign you up to our email list so you can receive updates as they are made available. We will never abuse this privilege by providing your information to anyone else.
-         
-
+  
+  
     =gajs
