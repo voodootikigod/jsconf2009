@@ -2,21 +2,16 @@
 <html>
   <head>
     <title>JSCONF 2009</title>
-    <script language="javascript" src="javascripts/jquery.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.cookie.js" type="text/javascript"></script><script language="javascript" src="javascripts/typeface.js" type="text/javascript"></script><script language="javascript" src="javascripts/helvetiker_regular.typeface.js" type="text/javascript"></script><script language="javascript" src="javascripts/helvetiker_bold.typeface.js" type="text/javascript"></script><script language="javascript" src="javascripts/application.js" type="text/javascript"></script>
-    <!--[if IE]><script type="text/javascript" src="javascripts/excanvas.js"></script><![endif]-->
-          <script type="text/javascript">
-            if ($.cookie("stylesheet") == "fringe") {
-              document.write('<link href="stylesheets/fringe.css" media="all" rel="stylesheet" type="text/css"/>');
-            } else {
-              document.write('<link href="stylesheets/professional.css" media="all" rel="stylesheet" type="text/css"/>');
-            }
-          </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+    <script language="javascript" src="javascripts/jquery.cookie.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.flickrGallery.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery-ui-personalized-1.6rc5.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.flickr-1.0.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.hoverIntent.minified.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.lightbox-0.5.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/application.js" type="text/javascript"></script>
+    <link href="stylesheets/application.css" media="all" rel="stylesheet" type="text/css"/><link href="stylesheets/flickrGallery-large.css" media="all" rel="stylesheet" type="text/css"/><link href="stylesheets/jquery.lightbox-0.5.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
   <body>
     <div id='frame'>
       <div id='header'>
         <h1>JSCONF 2009</h1>
       </div>
+      <div id='datefocus'></div>
       <div id='datebox'>
         <div class='content'>
           April 24 &amp; 25, 2009
@@ -25,84 +20,167 @@
           </div>
         </div>
       </div>
-      <div id='tagline'>
-        <span id='mots'>
-          don't call it dhtml
-        </span>
+      <div id='tweet_wrapper'>
+        <div id='tagline'>
+          <span id='mots'>
+            &nbsp;
+          </span>
+        </div>
       </div>
       <div class='clearfix' id='navigation'>
         <h4>
           <span>navigate</span>
         </h4>
         <ul>
-          <li>
-            <a href='/'>home</a>
+          <li id='home'>
+            <a href='/'>
+              <span>Home</span>
+            </a>
           </li>
-          <li>
-            <a href='/speakers.html'>call for speakers</a>
+          <li id='accommodations'>
+            <a href='/accommodations.html'>
+              <span>Accommodations</span>
+            </a>
           </li>
-          <li>
-            <a href='/accommodations.html'>accommodations</a>
+          <li id='speakers'>
+            <a href='/speakers.html'>
+              <span>Speakers</span>
+            </a>
           </li>
-          <li>
-            <a href='/curators.html'>curators</a>
+          <li id='sponsors'>
+            <a href='/sponsors.html'>
+              <span>Sponsors</span>
+            </a>
           </li>
-          <!-- %li -->
-          <!-- %a{"href"=>"/schedule.html"} schedule -->
-          <!-- %li -->
-          <!-- %a{"href"=>"/register.html"} register -->
+          <li id='agenda'>
+            <a href='/agenda.html'>
+              <span>Agenda</span>
+            </a>
+          </li>
+          <li id='about'>
+            <a href='/about.html'>
+              <span>About</span>
+            </a>
+          </li>
         </ul>
+      </div>
+      <div id='earlybird'>
+        <a href='http://jsconf2009.eventbrite.com'>
+          <span>Early Bird Discount $450 if you register by March 11, 2009</span>
+        </a>
       </div>
       <div id='wrapper'>
         <div id='content'>
-          <h1>Home</h1>
-          <div class='bodycontent'>
-            <p>JSConf 2009 is a conference devoted to the programming language we all love to hate and hate to love, JavaScript. This is conference will be thoughtful, content driven, and exemplify the very nature of JavaScript. The core focus of this conference is to expose some of the details about JavaScript that are often overlooked and present them more as a discussion with the audience. The content of the conference should cater to all types of JavaScript users from client interfaces to server development to testing. No matter which programming language you love, you know of the pleasure and pain of JavaScript programming.</p>
-            <p>Come to this conference if you love JavaScript, come if you hate it, come if you don't even know how to program. Whatever drives you to come, you can be sure of one thing, there will be a lot of exciting and invigorating discussions to be had. After all, we are talking about JavaScript here and its used by every web framework.</p>
-            <p>We are trying to conduct this conference in such a manner that it addresses the core issues of the community as well as announcing cutting edge technologies in a language that often gets overlooked. The content and conference style will be different from most other conferences, not barcamp-style and not multi-track style, but somewhere between the two.</p>
-            <p>We are trying to make something different and we are trying to do it with JavaScript.</p>
-            <h2>News Updates</h2>
-            <div class='posting'>
-              <div class='details'>January 5, 2009</div>
-              <h4>Announcing JS Conf 2009 Dates</h4>
-              <p>We are quite excited and happy to announce the official date and place for JS Conf 2009. After weeks of hard work, we have been able to secure the luxurious and convenient <a href="http://www.hotelpalomar-arlington.com/">Hotel Palomar Arlington</a> in Rosslyn, Virginia for Friday April 24 and Saturday April 25 of 2009. We have posted all the details about special room rates, locations, and local airports on the <a href="/accommodations.html">accommodations page</a>. The hotel is a prime location that will allow both local and long distance guests to easily navigate Washington DC without a car. We are still finalizing speakers and pricing, but the dates and place for the conference are now locked. The rest of the information should be available in the coming weeks. We are quite excited about the conference and hope that you will join us in putting JavaScript in the limelight it rightfully deserves.</p>
+          <div id='leftbox'>
+            <div id='featured_speakers'>
+              <h3>
+                <span>Featured Speakers</span>
+              </h3>
+              <div class='speakers'>
+                <a href='/speakers.html'>
+                  <img alt='Jeff Haynie, CEO of Appcelerator' src='/images/speakers/jeff_haynie.jpg' />
+                </a>
+                <a href='/speakers.html'>
+                  <img alt='Francisco Tolmasky, Creator of Objective-J' src='/images/speakers/francisco.jpg' />
+                </a>
+                <a href='/speakers.html'>
+                  <img alt='Chris Anderson, CouchDB Guru' src='/images/speakers/chris_anderson.jpg' />
+                </a>
+                <a href='/speakers.html'>
+                  <img alt='Mike Subelsky, co-founder of the web startup OtherInbox.com, and the co-organizer of Ignite Baltimore' src='/images/speakers/mike_subelsky.jpg' />
+                </a>
+                <a href='/speakers.html'>
+                  <img alt='More speakers coming soon' src='/images/announcingsoon.jpg' />
+                </a>
+                <a href='/speakers.html'>
+                  <img alt='More speakers coming soon' src='/images/announcingsoon.jpg' />
+                </a>
+              </div>
+            </div>
+            <div id='where_to_meet'>
+              <a href='/accommodations.html'>
+                <h3>
+                  <span>Where to Meet</span>
+                </h3>
+                <p>Hotel Palomar Arlington</p>
+                <p>JSCONF Special Rate of $159 per night</p>
+              </a>
+            </div>
+            <div id='latest_news'>
+              <h3>
+                <span>Latest News</span>
+              </h3>
+              <div class='postings'>
+                <div class='posting'>
+                  <h4>
+                    Conference Registration is NOW OPEN
+                    <span class='details'>January 23, 2009</span>
+                  </h4>
+                  <div class='content'>
+                    <p>As you may have noticed, we have a new site, new branding, and a lot more of information. We have been working very hard to make this conference a stellar first JSConf. As of today, <a href="http://jsconf2009.eventbrite.com">conference registration</a> is now open and available, you can pay with a credit card or PayPal account. Once you have signed up, you are more than welcome to help spread the word about JSConf 2009 using the following badge for your website, blog, or twitter background.</p>
+                    <p>
+                      <center>
+                        <img alt='JSConf 2009 - Be there or be static' src='http://jsconf.s3.amazonaws.com/badges/attendee.jpg' />
+                      </center>
+                    </p>
+                  </div>
+                </div>
+                <div class='posting'>
+                  <h4>
+                    Announcing JSConf 2009 Dates
+                    <span class='details'>January 5, 2009</span>
+                  </h4>
+                  <div class='content'>
+                    <p>We are quite excited and happy to announce the official date and place for JSConf 2009. After weeks of hard work, we have been able to secure the luxurious and convenient <a href="http://www.hotelpalomar-arlington.com/">Hotel Palomar Arlington</a> in Rosslyn, Virginia for Friday April 24 and Saturday April 25 of 2009. We have posted all the details about special room rates, locations, and local airports on the <a href="/accommodations.html">accommodations page</a>. The hotel is a prime location that will allow both local and long distance guests to easily navigate Washington DC without a car. We are still finalizing speakers and pricing, but the dates and place for the conference are now locked. The rest of the information should be available in the coming weeks. We are quite excited about the conference and hope that you will join us in putting JavaScript in the limelight it rightfully deserves.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div id='sidebar'>
-          <div id='subscriptionbox'>
-            <h4>
-              <span>Register for Updates</span>
-            </h4>
-                <form action="http://jsconf2009.cmail1.com/s/470130/" method="post">
-                <div>
-                  <span class="label"><label for="name">Name:</label></span>
-                  <span><input type="text" name="name" id="name" size="25" /></span>
-                </div>
-                <div>
-                  <span class="label"><label for="l470130-470130">Email Address:</label></span>
-                  <span><input type="text" name="cm-470130-470130" id="l470130-470130" size="25" /></span>
-                </div>
-                <div class="button">
-                  <span class="button"><input type="image" src="/images/ilovejs.gif" value="Subscribe" /></span>
-                </div>
-                </form>
-            <p>This will sign you up to our email list so you can receive updates as they are made available. We will never abuse this privilege by providing your information to anyone else.</p>
+          <div id='sponsors_sidebar'>
+            <h3>
+              <span>Sponsors</span>
+            </h3>
+            <h4>Premium Sponsors</h4>
+            <div class='sponsorlist'>
+              <a href='/sponsors.html'>
+                <img alt='Sponsorship Opportunity Available' src='/images/sponsorshipopp.gif' />
+              </a>
+            </div>
+            <h4>Sponsors</h4>
+            <div class='sponsorlist'>
+              <a href='/sponsors.html'>
+                <img alt='Sponsorship Opportunity Available' src='/images/sponsorshipopp.gif' />
+              </a>
+            </div>
+            <h4>Curators</h4>
+            <div class='sponsorlist'>
+              <a href='http://www.iterativedesigns.com'>
+                <img alt='Iterative Designs' src='/images/iterativedesigns.png' />
+              </a>
+              <a href='http://www.perphic.com'>
+                <img alt='Perphic' src='/images/perphic.png' />
+              </a>
+            </div>
           </div>
-          <div class='clearfix' id='stylepicker'>
-            <a href='http://www.jsconf2009.com' id='cleanme'>
-              <img src='/images/cleanme.png' />
-              <br />
-              Clean Style
-            </a>
-            <a href='http://www.jsfringe.com' id='fringeme'>
-              <img src='/images/fringeme.png' />
-              <br />
-              Fringe Style
-            </a>
-          </div>
+          <!-- 
+          -->
+          <!-- 
+          -->
+          <!-- %h1 Home -->
+          <!-- .bodycontent -->
+          <!-- %p JSConf 2009 is a conference devoted to the programming language we all love to hate and hate to love, JavaScript. This is conference will be thoughtful, content driven, and exemplify the very nature of JavaScript. The core focus of this conference is to expose some of the details about JavaScript that are often overlooked and present them more as a discussion with the audience. The content of the conference should cater to all types of JavaScript users from client interfaces to server development to testing. No matter which programming language you love, you know of the pleasure and pain of JavaScript programming. -->
+          <!-- %p Come to this conference if you love JavaScript, come if you hate it, come if you don't even know how to program. Whatever drives you to come, you can be sure of one thing, there will be a lot of exciting and invigorating discussions to be had. After all, we are talking about JavaScript here and its used by every web framework. -->
+          <!-- %p We are trying to conduct this conference in such a manner that it addresses the core issues of the community as well as announcing cutting edge technologies in a language that often gets overlooked. The content and conference style will be different from most other conferences, not barcamp-style and not multi-track style, but somewhere between the two. -->
+          <!-- %p We are trying to make something different and we are trying to do it with JavaScript. -->
+          <!-- 
+          -->
+          <!-- 
+          -->
+          <!-- %h2 News Updates -->
         </div>
       </div>
+      <div id='footer'></div>
     </div>
         <script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

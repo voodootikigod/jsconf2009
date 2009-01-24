@@ -2,21 +2,16 @@
 <html>
   <head>
     <title>JSCONF 2009</title>
-    <script language="javascript" src="javascripts/jquery.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.cookie.js" type="text/javascript"></script><script language="javascript" src="javascripts/typeface.js" type="text/javascript"></script><script language="javascript" src="javascripts/helvetiker_regular.typeface.js" type="text/javascript"></script><script language="javascript" src="javascripts/helvetiker_bold.typeface.js" type="text/javascript"></script><script language="javascript" src="javascripts/application.js" type="text/javascript"></script>
-    <!--[if IE]><script type="text/javascript" src="javascripts/excanvas.js"></script><![endif]-->
-          <script type="text/javascript">
-            if ($.cookie("stylesheet") == "fringe") {
-              document.write('<link href="stylesheets/fringe.css" media="all" rel="stylesheet" type="text/css"/>');
-            } else {
-              document.write('<link href="stylesheets/professional.css" media="all" rel="stylesheet" type="text/css"/>');
-            }
-          </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+    <script language="javascript" src="javascripts/jquery.cookie.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.flickrGallery.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery-ui-personalized-1.6rc5.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.flickr-1.0.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.hoverIntent.minified.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.lightbox-0.5.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/application.js" type="text/javascript"></script>
+    <link href="stylesheets/application.css" media="all" rel="stylesheet" type="text/css"/><link href="stylesheets/flickrGallery-large.css" media="all" rel="stylesheet" type="text/css"/><link href="stylesheets/jquery.lightbox-0.5.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
   <body>
     <div id='frame'>
       <div id='header'>
         <h1>JSCONF 2009</h1>
       </div>
+      <div id='datefocus'></div>
       <div id='datebox'>
         <div class='content'>
           April 24 &amp; 25, 2009
@@ -25,60 +20,70 @@
           </div>
         </div>
       </div>
-      <div id='tagline'>
-        <span id='mots'>
-          don't call it dhtml
-        </span>
+      <div id='tweet_wrapper'>
+        <div id='tagline'>
+          <span id='mots'>
+            &nbsp;
+          </span>
+        </div>
       </div>
       <div class='clearfix' id='navigation'>
         <h4>
           <span>navigate</span>
         </h4>
         <ul>
-          <li>
-            <a href='/'>home</a>
+          <li id='home'>
+            <a href='/'>
+              <span>Home</span>
+            </a>
           </li>
-          <li>
-            <a href='/speakers.html'>call for speakers</a>
+          <li id='accommodations'>
+            <a href='/accommodations.html'>
+              <span>Accommodations</span>
+            </a>
           </li>
-          <li>
-            <a href='/accommodations.html'>accommodations</a>
+          <li id='speakers'>
+            <a href='/speakers.html'>
+              <span>Speakers</span>
+            </a>
           </li>
-          <li>
-            <a href='/curators.html'>curators</a>
+          <li id='sponsors'>
+            <a href='/sponsors.html'>
+              <span>Sponsors</span>
+            </a>
           </li>
-          <!-- %li -->
-          <!-- %a{"href"=>"/schedule.html"} schedule -->
-          <!-- %li -->
-          <!-- %a{"href"=>"/register.html"} register -->
+          <li id='agenda'>
+            <a href='/agenda.html'>
+              <span>Agenda</span>
+            </a>
+          </li>
+          <li id='about'>
+            <a href='/about.html'>
+              <span>About</span>
+            </a>
+          </li>
         </ul>
+      </div>
+      <div id='earlybird'>
+        <a href='http://jsconf2009.eventbrite.com'>
+          <span>Early Bird Discount $450 if you register by March 11, 2009</span>
+        </a>
       </div>
       <div id='wrapper'>
         <div id='content'>
-          <h1>Accommodations</h1>
           <div class='bodycontent' id='accommodations'>
-            <table width='100%'>
-              <tr>
-                <td>
-                  <a href='http://www.hotelpalomar-arlington.com/'>
-                    <img src='/images/arlington_1c_invert.jpg' />
-                  </a>
-                </td>
-                <td>
-                  <div class='quicknote'>
-                    $159 per night
-                    <div class='note'>Call 1-866-505-1001</div>
-                  </div>
-                </td>
-              </tr>
-            </table>
-            <p>
-              <center>
-                <img src='/images/skyline.png' />
-              </center>
-            </p>
-            <p>JSConf 2009 will be held at the swanky and sophisticated <a href="http://www.hotelpalomar-arlington.com/">Hotel Palomar</a> in Arlington, Virginia. We are very excited about having the event at Hotel Palomar, its elegance and modern design will serve as the perfect backdrop for the event! We are working closely with Hotel Palomar to ensure a perfect event and we have arranged a special room rate for guest coming from out of town. The rate is $159 per night for a single or double room, the rate is valid between the dates of April 23 - 26, 2009. The rooms are absolutely spectacular and most have a wonderful view of the Potomac River and city. For reservations please call 1-866-505-1001 and mention that you are with the JS Conference 2009 group, their courteous and helpful staff will help make sure you get the proper reservations.</p>
-            <h4>Location</h4>
+            <h1>
+              <a href='http://www.hotelpalomar-arlington.com/'>
+                <img alt='Palomar Arlington' src='/images/arlington_4c.jpg' />
+              </a>
+            </h1>
+            <div class='quicknote'>
+              $159 per night
+              <div class='note'>Call 1-866-505-1001 GROUP JSCONF</div>
+            </div>
+            <div id='palomarpics'></div>
+            <p>JSConf 2009 will be held at the swanky and sophisticated <a href="http://www.hotelpalomar-arlington.com/">Hotel Palomar</a> in Arlington, Virginia. We are very excited about having the event at Hotel Palomar, its elegance and modern design will serve as the perfect backdrop for the event! We are working closely with Hotel Palomar to ensure a perfect event and we have arranged a special room rate for guest coming from out of town. The rate is $159 per night for a single or double room, the rate is valid between the dates of April 23 - 26, 2009. The rooms are absolutely spectacular and most have a wonderful view of the Potomac River and city. For reservations please call 1-866-505-1001 and mention that you are with the JSConf 2009 group, their courteous and helpful staff will help make sure you get the proper reservations.</p>
+            <h2>Location</h2>
             <center>
               <a href='http://maps.google.com/maps?rls=en-us&amp;ie=UTF-8&amp;oe=UTF-8&amp;um=1&amp;q=hotel+palomar+arlington&amp;fb=1&amp;cid=0,0,8917210912810631245&amp;sa=X&amp;oi=local_result&amp;resnum=1&amp;ct=image'>
                 <img src='/images/arlington_map.png' />
@@ -92,40 +97,8 @@
             <p>As mentioned above, we recommend taking the metro over driving to the conference, it will save you time, money, frustration, and the environment. That said, if you are driving the hotel offers Valet parking with full in-and-out privileges for $30 per night and self parking for $18.</p>
           </div>
         </div>
-        <div id='sidebar'>
-          <div id='subscriptionbox'>
-            <h4>
-              <span>Register for Updates</span>
-            </h4>
-                <form action="http://jsconf2009.cmail1.com/s/470130/" method="post">
-                <div>
-                  <span class="label"><label for="name">Name:</label></span>
-                  <span><input type="text" name="name" id="name" size="25" /></span>
-                </div>
-                <div>
-                  <span class="label"><label for="l470130-470130">Email Address:</label></span>
-                  <span><input type="text" name="cm-470130-470130" id="l470130-470130" size="25" /></span>
-                </div>
-                <div class="button">
-                  <span class="button"><input type="image" src="/images/ilovejs.gif" value="Subscribe" /></span>
-                </div>
-                </form>
-            <p>This will sign you up to our email list so you can receive updates as they are made available. We will never abuse this privilege by providing your information to anyone else.</p>
-          </div>
-          <div class='clearfix' id='stylepicker'>
-            <a href='http://www.jsconf2009.com' id='cleanme'>
-              <img src='/images/cleanme.png' />
-              <br />
-              Clean Style
-            </a>
-            <a href='http://www.jsfringe.com' id='fringeme'>
-              <img src='/images/fringeme.png' />
-              <br />
-              Fringe Style
-            </a>
-          </div>
-        </div>
       </div>
+      <div id='footer'></div>
     </div>
         <script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
