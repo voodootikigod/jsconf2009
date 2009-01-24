@@ -10,6 +10,15 @@ jQuery(document).ready(function(){
 	}
 	$("#datefocus").hide();
 	$("#datebox").mouseover(function()  { $("#datefocus").show(); }).mouseout(function()  { $("#datefocus").hide(); })
+	
+	$('#palomarpics').flickrGallery({ 
+		galleryHeight : 300,
+		useFlickr: 'true',
+		flickrAPIKey: 'a22b1a90b000578e1854ebdb3a3b5ba7',
+		photosetID: '72157602846636124',
+		useHoverIntent: 'true',
+		useLightBox: 'true'
+	});
 });
 
 

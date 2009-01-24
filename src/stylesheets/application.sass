@@ -82,6 +82,18 @@ body
   :margin 0px 0px
   :height 55px
 
+#accommodations h1
+  :background black
+  :padding-bottom 0px
+  :text-align center
+
+#accommodations .quicknote
+  :background black
+  :text-transform uppercase
+  :color white
+  :font-size 14pt
+  :padding-bottom 8px
+  :text-align center
 
 
 #navigation li a:hover 
@@ -114,15 +126,27 @@ li#about a
 #wrapper
   :margin-top 220px
   
-  
-  
-#where_to_meet
+.sponsorlist a img
+  :display block
+  :margin 30px auto
+#sponsors_sidebar
+  :padding-top 40px
+#sponsors_sidebar h4
+  :color #81984c
+  :font-size 10px
+  / :padding-bottom 5px
+  :border-bottom 1px solid #81984c
+  :margin 0px 15px
+  :padding 5px 5px
+  :text-align center
+#where_to_meet a 
   :width 235px
   :height 340px
   :margin-left 8px
   :background url(../images/wheretomeet.png) top left no-repeat
   :float left
-#where_to_meet h3  
+#where_to_meet h3,  
+#where_to_meet p  
   :display none
 #featured_speakers
   :width 461px
@@ -133,6 +157,38 @@ li#about a
   :margin 0px 0px 12px 12px
   :float left
 
+#leftbox
+  :width 720px
+  :float left
+#latest_news .postings
+  :margin-left 19px
+  :padding-top 4px
+  :padding-bottom 4px
+  :background #e8e8e8
+  
+#latest_news
+  :float left
+  :margin-left 14px
+  :margin-top 14px
+
+#latest_news h3 span
+  :display none
+.posting 
+  :margin 0px 8px 8px
+.posting .content
+  :background white
+  :padding 10px 20px
+#latest_news h3
+  :height 51px
+  :background transparent url('../images/latestnews.png') top left no-repeat
+.posting h4
+  :background url('../images/postingheader.gif') top left no-repeat
+  :height 33px
+  :line-height 33px
+  :padding-left 20px
+  :font-weight bold
+  :color #fb2300
+  :font-size 14px
   
 #featured_speakers .speakers
   :background #e3eff1
@@ -154,8 +210,56 @@ li#about a
   :float left
   :margin-left 8px
   :display block
-  :height 735px
   
+a
+  :color #a5ce45
+  :color #0084cb
+  
+p
+  :margin-bottom 1.5em
+#speakers.bodycontent h1 
+  :display none
+#speakers.bodycontent hr
+  :margin-top 20px
+  
+#sponsors.bodycontent ul  
+  :margin-left 20px
+#sponsors.bodycontent .sponsor
+  :margin-bottom 40px
+h4 span.details
+  :margin-left 40px
+  :font-size 85%
+  :font-weight normal
+h1 
+  :font
+    :size 200%
+    :weight bold
+  :color #f88707
+h2 
+  :font
+    :size 150%
+    :weight bold
+  :color #64bbcb
+h4 
+  :font
+    :size 125%
+    :weight bold
+  :color #af000c  
+.speaker h2
+  :margin-left 180px
+  :font-size 200%
+  :font-weight bold
+  :padding-top 30px
+  :color #64bbcb
+.speaker p
+  :margin-left 180px
+.speaker img
+  :float left
+.speaker
+  +clearfix
+  / :margin-bottom 40px
+.bodycontent  
+  :margin 0px 22px 0px 42px
 #content
   +clearfix
 #footer 
