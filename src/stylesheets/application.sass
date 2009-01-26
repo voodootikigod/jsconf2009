@@ -4,8 +4,12 @@ body
   :background #fdfff5 url(../images/splatter3.jpg) center top no-repeat
   :font-family arial, sans-serif
   :font-size 12px
-#header
+#header h1
   :display none
+#header
+  :position absolute
+  :height 300px
+  :width 350px
 #datebox  .content
   :display none
 #frame
@@ -105,10 +109,13 @@ body
 li#home a
   :width 44px
   :background url(../images/home.png) top left no-repeat
+li#register a
+  :width 85px
+  :background url(../images/register.png) top left no-repeat
 
 li#accommodations a
-  :width 156px
-  :background url(../images/accommodations.png) top left no-repeat
+  :width 69px
+  :background url(../images/venue.png) top left no-repeat
 li#speakers a
   :width 93px
   :background url(../images/speakers.png) top left no-repeat
@@ -149,7 +156,7 @@ li#about a
 #where_to_meet p  
   :display none
 #featured_speakers
-  :width 461px
+  :width 453px
   :margin-left 14px
   :float left
 #featured_speakers a
@@ -158,7 +165,8 @@ li#about a
   :float left
 
 #leftbox
-  :width 720px
+  :width 710px
+  :margin-left 9px
   :float left
 #latest_news .postings
   :margin-left 19px
@@ -201,7 +209,7 @@ li#about a
 #featured_speakers h3
   :background transparent url('../images/featuredspeakers.png') top left no-repeat
   :height 47px
-  :width 461px
+  :width 453px
 #sponsors_sidebar h3 
   :display none
 #sponsors_sidebar
@@ -217,10 +225,11 @@ a
   
 p
   :margin-bottom 1.5em
-#speakers.bodycontent h1 
-  :display none
+/ #speakers.bodycontent h1 
+/   :display none
 #speakers.bodycontent hr
   :margin-top 20px
+  :margin-bottom 20px
   
 #sponsors.bodycontent ul  
   :margin-left 20px
@@ -249,7 +258,7 @@ h4
   :margin-left 180px
   :font-size 200%
   :font-weight bold
-  :padding-top 30px
+  :padding-top 0px
   :color #64bbcb
 .speaker p
   :margin-left 180px
