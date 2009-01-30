@@ -20,7 +20,7 @@ jQuery(document).ready(function(){
   		showProfileLink: true
   	});
   	$('#s3slider').s3Slider({
-       timeOut: 4000
+       timeOut: 6000
     });
   });
 	
