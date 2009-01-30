@@ -443,7 +443,6 @@ h4 {
   text-align: center; }
 
 #only_at_jsconf {
-  height: 200px;
   margin-top: 7px;
   margin-left: 16px;
   margin-bottom: 14px; }
@@ -451,7 +450,48 @@ h4 {
 #marketing_copy {
   background: #fef5b3;
   margin-left: 17px;
-  padding: 4px; }
+  padding: 4px;
+  height: 200px; }
+
+#s3slider ul {
+  list-style: none; }
+
+#s3slider {
+  height: 200px;
+  width: 669px;
+  position: relative; }
+
+#s3sliderContent {
+  width: 669px;
+  position: absolute;
+  top: 0;
+  margin-left: 0; }
+
+.s3sliderImage {
+  float: left;
+  position: relative;
+  display: none; }
+
+.s3sliderImage span {
+  position: absolute;
+  left: 0;
+  font: 15px/20px Arial, Helvetica, sans-serif;
+  padding: 10px 13px;
+  width: 374px;
+  background-color: #000;
+  filter: alpha(opacity=90);
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+  opacity: 0.9;
+  font-weight: bold;
+  color: #fff;
+  display: none;
+  top: 0;
+  text-align: center;
+  width: 643px; }
+
+.clear {
+  clear: both; }
 
 #only_at_jsconf h3 span {
   display: none; }
