@@ -84,7 +84,7 @@ a img {
   border: none; }
 
 body {
-  background: #fdfff5 url(../images/splatter3.jpg) center top no-repeat;
+  background: #fdfff5 url(../images/splatter4.jpg) center top no-repeat;
   font-family: arial, sans-serif;
   font-size: 12px; }
 
@@ -171,6 +171,27 @@ body {
   margin: 0px;
   border: 0px; }
 
+.jtwit-tweet-image {
+  display: none; }
+
+#twitter_update_list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+
+#profileLink {
+  margin: 8px;
+  text-align: center;
+  display: block;
+  padding: 8px; }
+
+#twitter_update_list li {
+  list-style: none;
+  margin: 0px;
+  padding: 8px;
+  border-bottom: 1px solid white;
+  font-size: 10px; }
+
 #navigation li a {
   display: block;
   float: left;
@@ -227,14 +248,15 @@ li#about a {
   background: url(../images/about.png) top left no-repeat; }
 
 #wrapper {
-  margin-top: 220px; }
+  margin-top: 190px; }
 
 .sponsorlist a img {
   display: block;
   margin: 30px auto; }
 
 #sponsors_sidebar {
-  padding-top: 40px; }
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
 #sponsors_sidebar h4 {
   color: #81984c;
@@ -320,11 +342,26 @@ li#about a {
 #sponsors_sidebar h3 {
   display: none; }
 
-#sponsors_sidebar {
-  background: #eef9d7 url(../images/sponsors_bkgrnd.png) top left no-repeat;
-  width: 182px;
+#sidebar {
   float: left;
   margin-left: 8px;
+  width: 182px; }
+
+#tweet_sidebar {
+  background: #f5e2e2;
+  display: block;
+  margin-top: 14px; }
+
+#tweet_sidebar h3 span {
+  display: none; }
+
+#tweet_sidebar h3 {
+  background: transparent url('../images/tweetup.gif') top left no-repeat;
+  height: 28px;
+  width: 182x; }
+
+#sponsors_sidebar {
+  background: #eef9d7 url(../images/sponsors_bkgrnd.png) top left no-repeat;
   display: block; }
 
 a {
@@ -401,3 +438,24 @@ h4 {
   height: 306px;
   margin: 12px 41px;
   background: transparent url(../images/jsconffooter.jpg) top left no-repeat; }
+
+.interested {
+  text-align: center; }
+
+#only_at_jsconf {
+  height: 200px;
+  margin-top: 7px;
+  margin-left: 16px;
+  margin-bottom: 14px; }
+
+#marketing_copy {
+  background: #fef5b3;
+  margin-left: 17px;
+  padding: 4px; }
+
+#only_at_jsconf h3 span {
+  display: none; }
+
+#only_at_jsconf h3 {
+  background: transparent url(../images/onlyatjsconf.png) top left no-repeat;
+  height: 41px; }

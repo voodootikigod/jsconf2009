@@ -3,7 +3,7 @@
   <head>
     <title>JSCONF 2009</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
-    <script language="javascript" src="javascripts/jquery.cookie.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.flickrGallery.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery-ui-personalized-1.6rc5.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.flickr-1.0.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.hoverIntent.minified.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.lightbox-0.5.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/application.js" type="text/javascript"></script>
+    <script language="javascript" src="javascripts/jquery.cookie.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.flickrGallery.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery-ui-personalized-1.6rc5.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.flickr-1.0.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.hoverIntent.minified.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.lightbox-0.5.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.twitter.js" type="text/javascript"></script><script language="javascript" src="javascripts/application.js" type="text/javascript"></script>
     <link href="stylesheets/application.css" media="all" rel="stylesheet" type="text/css"/><link href="stylesheets/flickrGallery-large.css" media="all" rel="stylesheet" type="text/css"/><link href="stylesheets/jquery.lightbox-0.5.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
   <body>
@@ -77,6 +77,12 @@
       <div id='wrapper'>
         <div id='content'>
           <div id='leftbox'>
+            <div id='only_at_jsconf'>
+              <h3>
+                <span>Only at JSConf 2009</span>
+              </h3>
+              <div id='marketing_copy'></div>
+            </div>
             <div id='featured_speakers'>
               <h3>
                 <span>Featured Speakers</span>
@@ -143,31 +149,42 @@
               </div>
             </div>
           </div>
-          <div id='sponsors_sidebar'>
-            <h3>
-              <span>Sponsors</span>
-            </h3>
-            <h4>Premium Sponsors</h4>
-            <div class='sponsorlist'>
-              <a href='/sponsors.html'>
-                <img alt='Sponsorship Opportunity Available' src='/images/sponsorshipopp.gif' />
-              </a>
+          <div id='sidebar'>
+            <div id='sponsors_sidebar'>
+              <h3>
+                <span>Sponsors</span>
+              </h3>
+              <h4>Premium Sponsors</h4>
+              <div class='sponsorlist'>
+                <a href='http://www.iterativedesigns.com'>
+                  <img alt='Iterative Designs' src='/images/iterativedesigns.png' />
+                </a>
+                <a href='http://www.launchboxdigital.com'>
+                  <img alt='LaunchBox Digital' src='/images/launch-box-digital.gif' />
+                </a>
+              </div>
+              <div class='interested'>
+                <a href='/sponsors.html'>Interested in Sponsorship?</a>
+              </div>
             </div>
-            <h4>Sponsors</h4>
-            <div class='sponsorlist'>
-              <a href='/sponsors.html'>
-                <img alt='Sponsorship Opportunity Available' src='/images/sponsorshipopp.gif' />
-              </a>
+            <div id='tweet_sidebar'>
+              <h3>
+                <span>Tweet Up</span>
+              </h3>
+              <div id='jsconftweets'></div>
             </div>
-            <h4>Curators</h4>
-            <div class='sponsorlist'>
-              <a href='http://www.iterativedesigns.com'>
-                <img alt='Iterative Designs' src='/images/iterativedesigns.png' />
-              </a>
-              <a href='http://www.perphic.com'>
-                <img alt='Perphic' src='/images/perphic.png' />
-              </a>
-            </div>
+            <!-- %h4 Sponsors -->
+            <!-- .sponsorlist -->
+            <!-- %a{"href"=>"/sponsors.html"} -->
+            <!-- %img{"src"=>"/images/sponsorshipopp.gif", "alt"=>"Sponsorship Opportunity Available"} -->
+            <!-- %h4 Curators -->
+            <!-- .sponsorlist -->
+            <!-- %a{"href"=>"http://www.iterativedesigns.com"} -->
+            <!-- %img{"src"=>"/images/iterativedesigns.png", "alt"=>"Iterative Designs"} -->
+            <!-- %a{"href"=>"http://www.perphic.com"} -->
+            <!-- %img{"src"=>"/images/perphic.png", "alt"=>"Perphic"} -->
+            <!-- 
+            -->
           </div>
           <!-- 
           -->

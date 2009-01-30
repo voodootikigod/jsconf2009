@@ -1,12 +1,35 @@
 #leftbox
 
-  #marketing_copy
-    
+  #only_at_jsconf
+    %h3 
+      %span Only at JSConf 2009
+    #marketing_copy
+      #s3slider
+        %ul#s3sliderContent
+          %li.s3sliderImage
+            %img{"src"=>"/images/mobilejs.jpg"}
+            %span JavaScript for the iPhone, Android, and the Blackberry
+          %li.s3sliderImage
+            %img{"src"=>"/images/clientjs.jpg"}
+            %span Building Incredibly Rich Internet Applications
+          %li.s3sliderImage
+            %img{"src"=>"/images/desktopjs.jpg"}
+            %span  Cross Platform Desktop Applications with JavaScript
+          %li.s3sliderImage
+            %img{"src"=>"/images/testjs.jpg"}
+            %span  Automated Web Browser Testing with JavaScript
+          %li.s3sliderImage
+            %img{"src"=>"/images/desktopjs.jpg"}
+            %span  Cross Platform Applications with JavaScript
 
+
+    
   #featured_speakers
     %h3
       %span Featured Speakers
     .speakers
+      %a{"href"=>"/speakers.html"}
+        %img{"src"=>"/images/speakers/brian_leroux.jpg", "alt"=>"Brian LeRoux, Co-creator of XUI and contributor to PhoneGap"}
       %a{"href"=>"/speakers.html"}
         %img{"src"=>"/images/speakers/andrew_turner.jpg", "alt"=>"Andrew Turner, CTO of FortiusOne and co-founder of Mapufacture"}
       %a{"href"=>"/speakers.html"}
@@ -17,8 +40,8 @@
         %img{"src"=>"/images/speakers/francisco.jpg", "alt"=>"Francisco Tolmasky, Creator of Objective-J"}
       %a{"href"=>"/speakers.html"}
         %img{"src"=>"/images/speakers/chris_anderson.jpg", "alt"=>"Chris Anderson, CouchDB Guru"}
-      %a{"href"=>"/speakers.html"}
-        %img{"src"=>"/images/speakers/mike_subelsky.jpg", "alt"=>"Mike Subelsky, co-founder of the web startup OtherInbox.com, and the co-organizer of Ignite Baltimore"}
+      / %a{"href"=>"/speakers.html"}
+      /   %img{"src"=>"/images/speakers/mike_subelsky.jpg", "alt"=>"Mike Subelsky, co-founder of the web startup OtherInbox.com, and the co-organizer of Ignite Baltimore"}
 
   #where_to_meet
     %a{"href"=>"/accommodations.html"}
@@ -64,7 +87,7 @@
   #tweet_sidebar
     %h3
       %span Tweet Up
-    #jsconf_twitters
+    #jsconftweets
   
   
   
