@@ -28,8 +28,29 @@ jQuery(document).ready(function(){
   
 	});
 	
+	$("#right").click(function(e) {
+	  e.stopPropagation();
+	  e.preventDefault();
+	  $("#right").hide();
+	  $("#left").show();
+	  $("#speaker_nav span").html("Displaying 2 of 2");
+	  $("#speaker_nav span").css({"margin-right": "22px"})
+	  $("#slide2").show();
+	  $("#slide1").hide();
+	  
+	});
+	$("#left").click(function(e) {
+	  e.stopPropagation();
+	  e.preventDefault();
+	  $("#left").hide();
+	  $("#right").show();
+	  $("#speaker_nav span").css({"margin-right": "0px"})
+	  $("#speaker_nav span").html("Displaying 1 of 2")
+	  $("#slide1").show();
+	  $("#slide2").hide();
+	});
 	
-	
+	$("#left").hide();
 	
 	$("#datefocus").hide();
 	$("#datebox").mouseover(function()  { $("#datefocus").show(); }).mouseout(function()  { $("#datefocus").hide(); })
