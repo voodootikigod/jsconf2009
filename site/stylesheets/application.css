@@ -331,6 +331,9 @@ li#about a {
   color: #fb2300;
   font-size: 14px; }
 
+.posting h4 a, .posting h4 a:visited {
+  color: #fb2300; }
+
 #featured_speakers .speakers {
   background: #e3eff1;
   height: 293px;
@@ -555,3 +558,20 @@ h4 {
 
 #speaker_nav {
   float: right; }
+
+.posting .content {
+  padding-bottom: 1px;
+  margin-bottom: 0px; }
+
+.comment_count {
+  padding: 0px 20px 10px;
+  text-left: right;
+  background: white; }
+
+.bodycontent#article {
+  margin-top: 22px; }
+
+h1 div.details {
+  font-size: 12px;
+  color: black;
+  font-weight: bold; }
