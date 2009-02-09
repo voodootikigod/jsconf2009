@@ -1,3 +1,7 @@
+.posting
+  =partial("speaker_richard_worth")
+  .comment_count
+    ='<a href="http://www.jsconf2009.com/speaker_richard_worth.html#disqus_thread">View Comments</a>'
 
 .posting
   =partial("speaker_john_resig")
@@ -8,12 +12,12 @@
   =partial("craft_beer_wine_tasting")
   .comment_count
     ='<a href="http://www.jsconf2009.com/craft_beer_wine_tasting.html#disqus_thread">View Comments</a>'
-.posting
-  =partial("conference_registration")
-  .comment_count
-    ='<a href="http://www.jsconf2009.com/conference_registration.html#disqus_thread">View Comments</a>'
 
-- if !@limited_articles        
+- if !@limited_articles
+  .posting
+    =partial("conference_registration")
+    .comment_count
+      ='<a href="http://www.jsconf2009.com/conference_registration.html#disqus_thread">View Comments</a>'
   .posting
     =partial("opening_announcement")
     .comment_count
