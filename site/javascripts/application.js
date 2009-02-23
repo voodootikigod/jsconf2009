@@ -1,6 +1,8 @@
 // These says are either made up or taken from twitter with no credit -- deal with it.
 var sayings = ["death by javascript inc", "javascript is a horrible nightmare", "@jonmoter has determined that getting CSS and Javascript to work in IE is a major pain in the ass.", "I'm the Jedi Grand Master when it comes to suckage at javascript", "I'm holding out for VBScriptConf", "One of those head-explodey things about Javascript: functions have methods.", "Oh Javascript. For some sick reason, I love you. Perhaps I am a masochist.", "Javascript is a weird (though wonderful) language", "I HATE JAVASCRIPT", "Be there or be static", "I'm worried I may start thinking in JavaScript soon... I'm scared.","I think uncooperative javascript can kiss my butt", "(typeof null) == 'object'. W...T...F...", "don't call it DHTML", "document.cookie('p0wned')", "V.squirrelmonkey"];
 
+
+var current_slide = 0;
 jQuery(document).ready(function(){
   
   // idx = (Math.ceil(Math.random()*100))%sayings.length;
@@ -31,26 +33,40 @@ jQuery(document).ready(function(){
 	$("#right").click(function(e) {
 	  e.stopPropagation();
 	  e.preventDefault();
-	  $("#right").hide();
-	  $("#left").show();
-	  $("#speaker_nav span").html("Displaying 2 of 2");
-	  $("#speaker_nav span").css({"margin-right": "22px"})
-	  $("#slide2").show();
-	  $("#slide1").hide();
+	  
+	  $(".slide").hide();
+	  total_slides = $(".slide").length;
+	  current_slide_id = ((current_slide) % total_slides) + 1;
+	  $("#slide"+current_slide_id).show();
+	  $("#speaker_nav span").html("Displaying "+current_slide_id+" of "+total_slides);
+	  if (current_slide_id == total_slides)  {
+	    current_slide = 0;
+	  } else {
+	    current_slide = current_slide_id;
+	  }
+	  
 	  
 	});
+	
+	
 	$("#left").click(function(e) {
 	  e.stopPropagation();
 	  e.preventDefault();
-	  $("#left").hide();
-	  $("#right").show();
-	  $("#speaker_nav span").css({"margin-right": "0px"})
-	  $("#speaker_nav span").html("Displaying 1 of 2")
-	  $("#slide1").show();
-	  $("#slide2").hide();
+	  
+	  $(".slide").hide();
+	  total_slides = $(".slide").length;
+	  current_slide_id = (Math.abs(current_slide -1) % total_slides);
+	  if (current_slide_id == 0)
+	    current_slide_id = total_slides;
+	  $("#slide"+current_slide_id).show();
+	  $("#speaker_nav span").html("Displaying "+current_slide_id+" of "+total_slides);
+    // if (current_slide_id == total_slides) {
+    //   current_slide = total_slides -1;
+    // }else {
+	    current_slide = current_slide_id;
+    // }
+	  
 	});
-	
-	$("#left").hide();
 	
 	$("#datefocus").hide();
 	$("#datebox").mouseover(function()  { $("#datefocus").show(); }).mouseout(function()  { $("#datefocus").hide(); })
@@ -63,6 +79,8 @@ jQuery(document).ready(function(){
 		useHoverIntent: 'true',
 		useLightBox: 'true'
 	});
+	
+	$("#right").click();
 });
 
 

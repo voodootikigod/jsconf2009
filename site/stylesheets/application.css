@@ -535,7 +535,7 @@ h4 {
 #marketing_copy a {
   text-decoration: none; }
 
-#slide2 {
+#slide2, #slide3 {
   display: none; }
 
 .all_articles {
@@ -567,6 +567,14 @@ h4 {
   padding: 0px 20px 10px;
   text-left: right;
   background: white; }
+
+.yettoannounce {
+  border-top: 5px dashed #333;
+  border-bottom: 5px dashed #333;
+  font-size: 14px;
+  text-align: center;
+  padding: 14px 0px;
+  margin: 12px 0px; }
 
 .bodycontent#article {
   margin-top: 22px; }
