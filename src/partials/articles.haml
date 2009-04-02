@@ -1,4 +1,8 @@
 .posting
+  =partial("major_announcement")
+  .comment_count
+    ='<a href="http://www.jsconf2009.com/major_announcement.html#disqus_thread">View Comments</a>'
+.posting
   =partial("speaker_peter_higgins")
   .comment_count
     ='<a href="http://www.jsconf2009.com/speaker_peter_higgins.html#disqus_thread">View Comments</a>'
@@ -7,12 +11,12 @@
   .comment_count
     ='<a href="http://www.jsconf2009.com/speaker_kris_zyp.html#disqus_thread">View Comments</a>'
 
-.posting
-  =partial("speaker_john_resig")
-  .comment_count
-    ='<a href="http://www.jsconf2009.com/speaker_john_resig.html#disqus_thread">View Comments</a>'
-
 - if !@limited_articles
+  .posting
+    =partial("speaker_john_resig")
+    .comment_count
+      ='<a href="http://www.jsconf2009.com/speaker_john_resig.html#disqus_thread">View Comments</a>'
+
   .posting
     =partial("speaker_richard_worth")
     .comment_count
