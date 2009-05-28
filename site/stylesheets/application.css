@@ -14,10 +14,6 @@
 
 
 
-
-
-
-
 html, body {
   margin: 0;
   padding: 0;
@@ -40,6 +36,9 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, th
   font-family: inherit;
   vertical-align: baseline; }
 
+body {
+  line-height: 1.5; }
+
 blockquote, q {
   margin: 0;
   padding: 0;
@@ -50,8 +49,9 @@ blockquote, q {
   font-family: inherit;
   vertical-align: baseline;
   quotes: "" ""; }
-  blockquote:before, q:before,
-  blockquote:after, q:after {
+  blockquote:before,
+  blockquote:after,   q:before,
+  q:after {
     content: ""; }
 
 th, td, caption {
@@ -429,7 +429,8 @@ h4 {
   float: left; }
 
 .speaker {
-  overflow: hidden;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
   display: inline-block; }
   .speaker {
     display: block; }
@@ -438,7 +439,8 @@ h4 {
   margin: 0px 22px 0px 42px; }
 
 #content {
-  overflow: hidden;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
   display: inline-block; }
   #content {
     display: block; }
