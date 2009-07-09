@@ -28,9 +28,14 @@
   
 
   #latest_news
+  
+  
     %h3
       %span Latest News
+    
     .postings
+      %div{:style=>"margin-bottom:12px; text-align:center"}= '<embed src="http://blip.tv/play/g_MnAQA" type="application/x-shockwave-flash" width="500" height="360" allowscriptaccess="always" allowfullscreen="true"></embed>'
+        
       - @limited_articles = true
       = partial('articles')
       .all_articles
